@@ -6,7 +6,7 @@ from keras.layers import Dense, Embedding, GRU, LSTM
 from keras.optimizers import Adam
 from tensorflow.keras.preprocessing.text import Tokenizer
 
-# model = load_model("model/Model.h5")
+model = load_model("model/Model.h5")
 with open('tokenize.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
