@@ -1,56 +1,63 @@
-<!DOCTYPE html> 
- <html lang="en"> 
- <head> 
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/> 
-   <style>
-     body{
-       margin: 0 0;
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       color: rgb(20, 20, 20);
-       background:url("{{url_for('static', filename='images/robot.jpg')}}") no-repeat center fixed;
-       background-size: cover;
-       background-color: rgb(178, 201, 235);
-       text-align: center;
-     }
-     .background{
-       background-color: rgba(255, 255, 255, 0.74);
-       border-radius: 5px;
-       width: 85vw;
-       padding: 1em;
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-     }
-     .header{
-       margin: 0.5em ;
-       font-weight: bold;
-       font-size: 2.25em;
-       color: rgb(0, 7, 110);
-     }
-     label{
-       display: block;
-       font-size: 1.75em;
-       margin-bottom: 0.25em;
-     }
-     textarea{
-       margin: 0 auto;
-       display: block;
-       height: 20vh;
-       width: 60vw;
-     }
-    .analysis{
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <style>
+    body {
+      margin: 0 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(20, 20, 20);
+      background-size: cover;
+      background-color: rgb(178, 201, 235);
+      text-align: center;
+    }
+
+    .background {
+      background-color: rgba(255, 255, 255, 0.74);
+      border-radius: 5px;
+      width: 85vw;
+      padding: 1em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header {
+      margin: 0.5em;
+      font-weight: bold;
+      font-size: 2.25em;
+      color: rgb(0, 7, 110);
+    }
+
+    label {
+      display: block;
+      font-size: 1.75em;
+      margin-bottom: 0.25em;
+    }
+
+    textarea {
+      margin: 0 auto;
+      display: block;
+      height: 20vh;
+      width: 60vw;
+    }
+
+    .analysis {
       font-weight: 700;
       font-size: 1.5em;
       color: black;
     }
-    .analysis_percent{
+
+    .analysis_percent {
       font-size: 1em;
       font-weight: 500;
       color: black;
     }
-    .back{
+
+    .back {
       margin: 0 auto 0.35em;
       font-size: small;
       display: block;
@@ -61,7 +68,8 @@
       color: white;
       border-radius: 2px;
     }
-    .predict{
+
+    .predict {
       padding: 1em;
       border: none;
       background-color: rgb(0, 7, 110);
@@ -69,30 +77,31 @@
       font-weight: bolder;
       margin: 0.5em 0 1em;
     }
-   </style>
-   <title>Starter Template</title> 
-  </head> 
-  
- <body> 
-  <div class="stop">
-  <div class="background">
-    <h1 class="header">Sentiment Analysis</h1> 
-    <div class="body"> 
-      <form action='/predict' method="post" class ="validate"> 
-        <div class="row1"> 
-          <label for="first_name"><b>Enter your Comment</b></label>  
-          <textarea name="text">Your Review here...</textarea> 
-        </div> 
-        <br>
-    
-        <h1 class="analysis"> PREDICTION: {{answer}} </h1>
-        <h2 class="analysis_percent"> PERCENTAGE: {{res}} % </h2>
-        <a href = '/' class="back"> Home Page</a>
-        <button type="submit" class="predict" >Predict Probability</button> 
-      </form> 
-    </div>
-  </div> 
-  </div> 
+  </style>
+  <title>Starter Template</title>
+</head>
 
-  </body> 
+<body>
+  <div class="stop">
+    <div class="background">
+      <h1 class="header">Sentiment Analysis</h1>
+      <div class="body">
+        <form action='/predict' method="post" class="validate">
+          <div class="row1">
+            <label for="first_name"><b>Enter your Comment</b></label>
+            <textarea name="text">Your Review here...</textarea>
+          </div>
+          <br>
+
+          <h1 class="analysis"> PREDICTION: {{answer}} </h1>
+          <h2 class="analysis_percent"> PERCENTAGE: {{res}} % </h2>
+          <a href='/' class="back"> Home Page</a>
+          <button type="submit" class="predict">Predict Probability</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>

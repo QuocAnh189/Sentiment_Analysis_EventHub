@@ -19,10 +19,10 @@ def main():
 def classify():
     # model = load_model("model/Model.h5")
 
-    # text = request.form["text"]
-    # text_list = [text]
-    # text_token = tokenizer.texts_to_sequences(text_list)
-    # text_pad = pad_sequences(text_token, maxlen = 241, padding = 'pre')
+    text = request.form["text"]
+    text_list = [text]
+    text_token = tokenizer.texts_to_sequences(text_list)
+    text_pad = pad_sequences(text_token, maxlen = 241, padding = 'pre')
     # pred = model.predict(text_pad)
     # if pred[0][0] > 0.5:
     #     result = "Positive Review!"
