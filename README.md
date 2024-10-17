@@ -52,7 +52,7 @@ To use the Flask web application for real-time sentiment analysis:
 1. Start the Flask development server:
 
    ```bash
-   flask run or python
+   flask run or python app.py
    ```
 
 2. Open your web browser and go to `http://127.0.0.1:5000/`. You'll see the home page where you can input text for classification.
