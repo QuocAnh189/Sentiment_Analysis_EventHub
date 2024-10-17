@@ -31,4 +31,6 @@ def classify():
     return render_template("home.html",res = per, answer = result)
 
 if __name__ == "__main__":
+    # from waitress import serve
+    # serve(app, host="0.0.0.0", port=5000)
     app.run(debug=True,use_reloader=False)
