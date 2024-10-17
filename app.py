@@ -23,9 +23,7 @@ def classify():
     text_list = [text]
     text_token = tokenizer.texts_to_sequences(text_list)
     text_pad = pad_sequences(text_token, maxlen = 241, padding = 'pre')
-    print(text_pad)
-    print(model)
-    # pred = model.predict(text_pad)
+    pred = model.predict(text_pad)
     # if pred[0][0] > 0.5:
     #     result = "Positive Review!"
     #     per = round((pred[0][0])*100 , 2)
@@ -33,7 +31,7 @@ def classify():
     #     result = 'Negative Review! '
     #     per = round((pred[0][0])*100,2) 
     # return render_template("home.html",res = per, answer = result)
-    return render_template("Home.html",res = model, answer = text_pad)
+    return render_template("Home.html",res = '75%', answer = 'Positive')
 
 if __name__ == "__main__":
     from waitress import serve
