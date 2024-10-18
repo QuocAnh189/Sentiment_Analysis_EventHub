@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, jsonify
 import pickle 
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential, load_model
@@ -15,9 +15,12 @@ app = Flask(__name__)
 def main():
     return render_template("Home.html")
 
-@app.route('/predict', methods = ['POST'])
+@app.route('/predict', methods = ['GET'])
 def classify():
-    text = request.form["text"]
+    ## if you are using form
+    # text = request.form["text"] 
+    ## if you are using api
+    text = request.args.get("text") 
     text_list = [text]
     text_token = tokenizer.texts_to_sequences(text_list)
     text_pad = pad_sequences(text_token, maxlen = 241, padding = 'pre')
@@ -28,7 +31,12 @@ def classify():
     else:
         result = 'Negative Review! '
         per = round((pred[0][0])*100,2) 
-    return render_template("home.html",res = per, answer = result)
+
+    # return render_template("home.html",res = per, answer = result)
+    return jsonify({
+        "result": result,
+        "percentage": per
+    })
 
 if __name__ == "__main__":
     # from waitress import serve
