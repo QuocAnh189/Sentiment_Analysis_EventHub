@@ -59,6 +59,11 @@ To use the Flask web application for real-time sentiment analysis:
 
 3. Enter the text and submit it to get the sentiment prediction.
 
+### Running with Docker
+
+In project terminal run `docker-compose up --build`
+Test api in Postman with BASE_URL and GET METHOD: `http://127.0.0.1:5000/predict`
+
 ### Model Prediction Flow
 
 - **Tokenization & Padding**: Input text is tokenized using the pre-trained tokenizer and padded to match the expected input length of **241 tokens**.
@@ -75,6 +80,11 @@ Here’s a quick example to demonstrate how the sentiment classification works:
 2. Input: `"The event was terrible and very disappointing."`
    - Output: **Negative** (e.g., 0.15 probability)
 
-## Contributing
+## Author Contact
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to modify. Make sure to update tests as appropriate to ensure everything works smoothly.
+Contact me with any questions!<br>
+
+Email: anquoc18092003@gmail.com
+Facebook: https://www.facebook.com/tranphuocanhquoc2003
+
+<p style="text-align:center">Thank You so much for your time !!!</p>
